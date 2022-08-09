@@ -26,7 +26,9 @@ for (int i = 0; i < n; i++)
 }
 
 cout<< endl;
-int fourth[10] = {1};
+
+//initializing all terms with 0
+int fourth[10] = {0};
 
 int m=10;
 
