@@ -34,9 +34,12 @@ void printArr(int arr[] , int n){
 
 
 int main(){
- int arr[12] = {1,2,3,4,5,6,7,8,9,10,11,12};
+ int arr[11] = {1,2,3,4,5,6,7,8,9,10,11};
+ int brr[12] = {1,2,3,4,5,6,7,8,9,10,11,12};
 
-swapAlternate(arr , 12);
+swapAlternate(arr , 11);
+swapAlternate(brr , 12);
 
- printArr(arr, 12);
+ printArr(arr, 11);
+ printArr(brr, 12);
 }
