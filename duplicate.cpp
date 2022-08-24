@@ -8,7 +8,7 @@ int findDuplicate(int arr[] , int size) {
         ans = ans ^ arr[i];
     };
 
-    for(int i =1 ; i< size ; i++){
+    for(int i =1; i< size ; i++){
         ans = ans^i;
     };
     return ans;
@@ -16,5 +16,5 @@ int findDuplicate(int arr[] , int size) {
 
 int main(){
 int arr[10] = {1,2,3,4,5,6,7,8,1,9};
-cout<< findDuplicate(arr , 10);
+cout<< findDuplicate(arr , 10); 
 };
