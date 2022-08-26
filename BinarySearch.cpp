@@ -5,7 +5,7 @@ using namespace std;
 int binarySearch(int arr[] , int size , int key){
 int start = 0;
 int end = size-1;
-
+//find mid of the array
 int mid = start +(end-start)/2;
 
 while (start <= end)
