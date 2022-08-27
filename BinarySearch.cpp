@@ -8,19 +8,19 @@ int end = size-1;
 //find mid of the array
 int mid = start +(end-start)/2;
 
-while (start <= end)
-{
-    if(arr[mid]== key){
-        return mid;
-    };
+    while (start <= end)
+    {
+        if(arr[mid]== key){
+            return mid;
+        };
 
-    if(key > arr[mid]){
-        start =mid+1;
-    }else{
-        end =mid-1;
-    }
-    mid = start +(end-start)/2; 
-};
+        if(key > arr[mid]){
+            start =mid+1;
+        }else{
+            end =mid-1;
+        }
+        mid = start +(end-start)/2; 
+    };
 
 return -1;
 
