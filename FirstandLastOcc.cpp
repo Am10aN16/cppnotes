@@ -57,15 +57,23 @@ return ans;
 
 int main(){
 
-int odd[6] = {1,2,3,3,3,5};
+int odd[5] = {1,2,3,3,5};
+int even[6] = {2,4,4,4,4,8};
 
 
 
-int first = firstOcc(odd ,6 , 3);
-int last = lastOcc(odd ,6 , 3);
-cout<< "Index of 4 is " << first<<endl;
-cout<< "Index of 4 is " << last <<endl;
+int oddfirst = firstOcc(odd ,5 , 3);
+int oddlast = lastOcc(odd ,5 , 3);
 
+int evenfirst =firstOcc(even ,6,4);
+int evenlast =lastOcc(even ,6,4);
+
+cout<< "First Index of 3 is " << oddfirst<<endl;
+cout<< " last index of 3 is " << oddlast <<endl;
+
+
+cout<< "First Index of 4 is " << evenfirst<<endl;
+cout<< " last index of 4 is " << evenlast <<endl;
 
 return 0;
 }
