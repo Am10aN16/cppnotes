@@ -19,7 +19,7 @@ bool checkPalindrome(char name[] , int n){
 
 void reverse(char name[] ,int n){
     int s=0;
-    int e=n-1;
+    int e= n-1;
 
     while(s<e){
         swap(name[s++] , name[e--]);
@@ -46,8 +46,16 @@ int main(){
 
     reverse(name, len);
     cout<<"Your name is:- "<<name<<endl;
+
+    cout<<"Palindrome:- ";
+    if (checkPalindrome(name , len)==1)
+    {
+       cout<<"Yes"<<endl;
+    }else{
+         cout<<"No"<<endl;
+    }
+    
    
-    cout<<"Palindrome:- "<< checkPalindrome(name, len)<<endl;
 
     return 0;
 }
