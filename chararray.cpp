@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//checking for palindrome or not
 bool checkPalindrome(char name[] , int n){
      int s=0;
      int e=n-1;
@@ -16,7 +17,7 @@ bool checkPalindrome(char name[] , int n){
     }
      return 1;
 }
-
+//reversing the arr
 void reverse(char arr[] ,int n){
     int s=0;
     int e= n-1;
@@ -25,7 +26,7 @@ void reverse(char arr[] ,int n){
         swap(arr[s++] , arr[e--]);
     }
 }
-
+//getting the length of the character array
 int getLength(char arr[]){
     int count =0;
     for(int i=0; arr[i] != 0 ; i++){
@@ -39,7 +40,7 @@ int main(){
     char name[20];
     cout<<"Enter your name: "<<endl;
     cin>>name;
-    // name[2] = '\0';
+    name[2] = '\0';
     cout<<"Your name is:- "<<name<<endl;
     int len = getLength(name);
     cout<<"Length of your char array is:- "<< len <<endl;
