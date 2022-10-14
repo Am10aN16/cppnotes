@@ -1,4 +1,4 @@
-//Q1 Write a program to draw basic graphics construction like line , circle ,arc , ellipse , rectangle
+Q1 Write a program to draw basic graphics construction like line , circle ,arc , ellipse , rectangle
 #include<graphics.h>  
 #include<conio.h>  
 void main()  
@@ -21,7 +21,7 @@ void main()
 
 
 
-//Q2 Write a program to draw a moving car using computer graphics programming
+Q2 Write a program to draw a moving car using computer graphics programming
 
 #include<graphics.h>  
 #include<conio.h>  
