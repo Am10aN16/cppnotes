@@ -89,47 +89,47 @@ using namespace std;
 
 //set bits
 
-// int setBits(int a , int b){
-//     int count = 0;
+int setBits(int a , int b){
+    int count = 0;
 
-//     while(a!=0){
-//         int bit = a&1;
-//         if(bit== 1){
-//             count++;
-//         }
-//         a = a>>1;
-//     }
+    while(a!=0){
+        int bit = a&1;
+        if(bit== 1){
+            count++;
+        }
+        a = a>>1;
+    }
 
-//     while(b!=0){
-//         int bit = b&1;
-//         if(bit== 1){
-//             count++;
-//         }
-//         b = b>>1;
-//     }
+    while(b!=0){
+        int bit = b&1;
+        if(bit== 1){
+            count++;
+        }
+        b = b>>1;
+    }
      
-//      return count;
-// }
-
-// int main(){
-//     int a ,b;
-//     cin>>a>>b;
-
-//     cout<< "No of bit sets in and b is: " << setBits(a,b) <<endl;
-// }
-
-//fbonacci series
-
-int NthFibonacci(int n){
-    if(n==1) return 0;
-    int term  = (n-1) + (n-2);
-    return term;
+     return count;
 }
 
 int main(){
-    int n;
-    cin>>n;
+    int a ,b;
+    cin>>a>>b;
 
-    cout<< "Fibonacci no: " << NthFibonacci(n) << endl;
+    cout<< "No of bit sets in and b is: " << setBits(a,b) <<endl;
 }
+
+//fbonacci series
+
+// int NthFibonacci(int n){
+//     if(n==1) return 0;
+//     int term  = (n-1) + (n-2);
+//     return term;
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+
+//     cout<< "Fibonacci no: " << NthFibonacci(n) << endl;
+// }
 
