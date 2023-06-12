@@ -11,7 +11,7 @@ void sortArr(int *arr, int size){
             swap(arr[i], arr[i+1]);
         }
     }
-
+    //recursive call
     sortArr(arr, size-1);
 }
  
