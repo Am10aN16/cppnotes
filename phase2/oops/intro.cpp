@@ -6,6 +6,12 @@ class Hero{
     public:
     int health ;
     char level;
+    static int timeToComplete;
+
+//simple construstor
+Hero(){
+    cout<<"Constrtuctor called"<<endl;
+}
 
 //PARAMETERIZED CONSTRUCTOR
     Hero(int health,char level) {
@@ -20,18 +26,48 @@ Hero(Hero& temp){
     this->level= temp.level;
 }
 
+static int random(){
+    return timeToComplete;
+}
+
+//destructor function
+~Hero(){
+    cout<<"Destructor bhai called"<<endl;
+}
+
 };
 
-
+int Hero::timeToComplete = 5;
 
 int main()
 {
-Hero Ram(100,'A');
+
+// cout<< Hero::timeToComplete << endl;
+cout<<Hero::random()<<endl;
+
+Hero a;
+cout<<a.timeToComplete<<endl;
+
+
+
+
+
+
+
+
+//static
+// Hero h1;
+//dynamic
+// Hero *h2 = new Hero();
+//manually destructor call
+// delete h2;
+
+// Hero Ram(100,'A');
 
 //copy constructor
-Hero Laxman(Ram);
+// Hero Laxman(Ram);
 
-cout<<Laxman.health<<endl;
+// cout<<Laxman.health<<endl;
 
 
 
