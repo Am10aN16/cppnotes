@@ -15,6 +15,15 @@ public:
         this->prev = NULL;
         this->next = NULL;
     }
+
+    ~Node(){
+        int val = this->data;
+        if(next !=NULL){
+            delete next;
+            next =NULL;
+        }
+        cout<<"Memory free with data: "<<val<<endl;
+    }
 };
 
 // travesing the linkedlist
@@ -30,7 +39,7 @@ void print(Node *head)
     cout << endl;
 }
 
-// getting the length
+// getting the length     
 int getLength(Node *head)
 {
     Node *temp = head;
@@ -110,6 +119,37 @@ void insertAtPosition(Node *&head, Node *&tail, int position, int d)
     nodeToInsert->prev = temp;
 }
 
+void deleteNode(int position, Node* &head, Node* &tail){
+
+    //deleting first node or start node
+    if(position == 1){
+        Node* temp = head;
+        temp->next->prev = NULL;
+        head = temp->next;
+        temp->next = NULL;
+        //memory free start node
+        delete temp;
+    }else{
+        //deleting any middle or last node
+         Node* curr = head;
+         Node* prev = NULL;
+
+         int cnt =1;
+         while(cnt < position){
+            prev = curr;
+            curr = curr->next;
+            cnt++;
+         }
+           if(curr->next == NULL){
+            tail = prev;
+        }
+        curr->prev = NULL;
+        prev->next = curr->next;
+        curr->next = NULL;
+         delete curr;
+    }
+}
+
 int main()
 {
 
@@ -134,5 +174,10 @@ int main()
     print(head);
     insertAtPosition(head, tail, 8, 420);
     print(head);
+
+    deleteNode(8, head,tail);
+    print(head);
+    cout<<"Head:"<<head->data<<endl;
+    cout<<"Tail:"<<tail->data<<endl;
     return 0;
 }

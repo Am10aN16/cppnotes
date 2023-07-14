@@ -99,10 +99,8 @@ void deleteNode(int position, Node* &head, Node* &tail){
          prev->next = curr->next;
          curr->next = NULL;
          delete curr;
-    }
-}
-
-
+    }  
+}     
 
 void print(Node* &head){
     Node* temp = head;
